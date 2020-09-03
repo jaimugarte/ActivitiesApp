@@ -1,0 +1,51 @@
+---
+output: word_document
+params:
+  location: NA,
+  type: NA,
+  target: NA,
+  organizer: NA,
+  startYear: NA,
+  startMonth: NA,
+  startDay: NA,
+  endYear: NA,
+  endMonth: NA,
+  endDay: NA,
+  director: NA,
+  as1: NA,
+  as2: NA,
+  sc: NA,
+  pr: NA,
+  participants: NA
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(htmltools)
+```
+**`r if(is.null(params$location) == F){ 'Location:'}`**
+  `r if(is.null(params$location) == F){ params$location }` 
+  
+**`r if(is.null(params$type) == F){ 'Activity type:'}`**
+  `r if(is.null(params$type) == F){ params$type }` 
+
+**`r if(is.null(params$target) == F){ 'For:'}`**
+  `r if(is.null(params$target) == F){ params$target }` 
+
+**`r if(is.null(params$director) == F){ 'Director:'}`**
+  `r if(is.null(params$director) == F){ params$director }` 
+
+**`r if(is.null(params$as1) == F){ 'Assistant director:'}`**
+  `r if(is.null(params$as1) == F){ params$as1 }`  
+
+**`r if(is.null(params$as2) == F){ '2nd Assistant director:'}`**
+  `r if(is.null(params$as2) == F){ params$as2 }`  
+
+**`r if(is.null(params$sc) == F){ 'Secretary:'}`**
+  `r if(is.null(params$sc) == F){ params$sc }`  
+
+**`r if(is.null(params$pr) == F){ 'Priest:'}`**
+  `r if(is.null(params$pr) == F){ params$pr }`  
+
+**Participants:**  
+  `r params$participants`   
